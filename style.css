@@ -11,6 +11,9 @@ header h2 {
     font-family: Arial, sans-serif;
     margin-top: 40px;
     color: white;
+    /* font-size: 100%; */
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 header h3 {
@@ -23,16 +26,18 @@ header h3 {
 .container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
-.card {
-    width: 1000px;
-    background-color: #f3f3f3;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 600px) {
+    .card {
+        width: 1000px;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 }
 
 body {
@@ -53,7 +58,7 @@ aside {
 
 main {
     flex: 3;
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
     margin: 10px;
     margin-top: 0;
     border-radius: 5px;
@@ -141,4 +146,45 @@ nav a:hover {
     background-color: white;
     border-radius: 5px;
     width: 60%
+}
+
+section {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 7px
+}
+
+section h2 {
+    margin: 20px
+}
+
+section p {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+    line-height: 1.4
+}
+
+section h4 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #383838;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    padding: 10px
+}
+
+.box img {
+    border-radius: 5px;
+    width: 70%;
+    margin-left: 30px;
+    margin-right: 30px;
+    cursor: pointer
 }
