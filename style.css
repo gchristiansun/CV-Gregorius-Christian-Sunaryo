@@ -28,11 +28,10 @@ header h3 {
 
 .card {
     width: 1000px;
-    background-color: #fff;
+    background-color: #f3f3f3;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: auto;
-    margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -45,7 +44,7 @@ aside {
     flex: 1.5;
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 0, 0);
+    background-color: white;
     margin: 10px;
     margin-top: 0;
     border-radius: 5px;
@@ -78,6 +77,17 @@ aside p {
 aside h2 {
     margin-left: 25px;
     margin-right: 20px
+}
+
+aside h4 {
+    margin-left: 35px;
+    margin-right: 20px
+}
+
+aside a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black
 }
 
 nav {
@@ -114,3 +124,21 @@ nav a:hover {
 /* nav:hover {
     transform: scale(1.03);
 } */
+
+.skill-bar {
+    width: 70%;
+    height: 5px;
+    background-color: #383838;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 35px;
+    margin-right: 20px;
+    padding: 2px
+}
+
+.skill-level {
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    width: 60%
+}
