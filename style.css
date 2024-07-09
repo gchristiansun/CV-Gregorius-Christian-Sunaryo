@@ -29,7 +29,13 @@ header h3 {
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
