@@ -2,7 +2,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 10px;
+    margin: 0.5vw;
     background-color: #383838;
     border-radius: 5px;
 }
@@ -106,7 +106,7 @@ nav {
     top: 5px;
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 0.5vw;
     background-color: #383838;
     border-radius: 5px;
     z-index: 1;
