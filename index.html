@@ -18,7 +18,7 @@
             <a href="#education">Education</a>
             <a href="#event">Event</a>
             <a href="#project">Project</a>
-            <a href="message.html">Message</a>
+            <a href="#message">Message</a>
         </nav>
         <hr>
         <div class="container">
@@ -31,11 +31,11 @@
                     <li>Kewarganegaraan: WNI</li>
                 </ul>
                 <h2>Media Sosial</h2>
-                <p class="bi bi-whatsapp"><a href="">WhatsApp</a></p>
-                <p class="bi bi-linkedin"><a href="">linkedin</a></p>
-                <p class="bi bi-github"><a href="">GitHub</a></p>
-                <p class="bi bi-instagram"><a href="">Instagram</a></p>
-                <p class="bi bi-envelope"><a href="">E-mail</a></p>
+                <p class="bi bi-whatsapp"><a href="https://api.whatsapp.com/send?phone=6283152445609&text=Hello%20from%20WhatsApp">WhatsApp</a></p>
+                <p class="bi bi-linkedin"><a href="https://www.linkedin.com/in/gregorius-christian-sunaryo-6aa3422b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">linkedin</a></p>
+                <p class="bi bi-github"><a href="https://github.com/gchristiansun">GitHub</a></p>
+                <p class="bi bi-instagram"><a href="https://www.instagram.com/g_christian_s">Instagram</a></p>
+                <p class="bi bi-envelope"><a href="mailto:christian10rks@gmail.com">E-mail</a></p>
 
                 <h2>Bahasa</h2>
                 <h4>Python</h4>
@@ -57,8 +57,6 @@
                 <div class="skill-bar">
                     <div class="skill-level"></div>
                 </div>
-
-
             </aside>
             <main>
                 <section id="about">
@@ -94,6 +92,31 @@
 
                 <section id="project">
                     <h2>Poject</h2>
+                </section>
+
+                <section id="message">
+                    <h2>Message</h2>
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Message</legend>
+                            <label for="name">Name:</label>
+                            <input class="format" type="text" id="name" required>
+    
+                            <label for="email">Email:</label>
+                            <input class="format" type="email" id="email" name="email" required>
+    
+                            <label for="jenis_kelamin">Jenis Kelamin:</label>
+                            <select id="jenis_kelamin" name="jenis_kelamin" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+    
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </fieldset>
+                        <br>
+                        <input class="button" type="submit" value="Send">
+                    </form>
                 </section>
             </main>
         </div>
