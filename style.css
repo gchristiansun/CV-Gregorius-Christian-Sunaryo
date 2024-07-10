@@ -12,7 +12,7 @@ header h2 {
     margin-top: 40px;
     color: white;
     /* font-size: 100%; */
-    font-size: 100%;
+    font-size: 1.8rem;
 }
 
 header h3 {
@@ -20,7 +20,7 @@ header h3 {
     color: white;
     margin-top: 5px;
     margin-bottom: 30px;
-    font-size: 1.2rem
+    font-size: 1rem
 }
 
 .container {
@@ -202,8 +202,8 @@ section h4 {
 }
 
 fieldset {
-    border-radius: 10px;
-    padding: 3vw;
+    border-radius: 5px;
+    padding: 1vw;
     margin-left: 3vw;
     margin-right: 3vw;
     margin-top: 3vw;
@@ -213,11 +213,12 @@ fieldset {
 }
 
 textarea {
-    border-radius: 10px;
+    border-radius: 5px;
     width: 80%;
     height: 150px;
-    padding: 10px;
-    margin-left: 1vw;
+    padding: 5px;
+    margin-left: 2vw;
+    margin-bottom: 10px
 }
 
 .button {
@@ -233,23 +234,23 @@ textarea {
 }
 
 .format {
-    border-radius: 10px;
+    border-radius: 5px;
     width: 80%;
-    padding: 10px;
-    margin-left: 1vw;
+    padding: 5px;
+    margin-left: 2vw;
 }
  
 label {
-    margin-left: 1vw;
+    margin-left: 2vw;
     margin-top: 20px;
     margin-bottom: 10px
 }
 
 select {
-    border-radius: 10px;
+    border-radius: 5px;
     width: 80%;
     padding: 10px;
-    margin-left: 1vw;
+    margin-left: 2vw;
 }
 
 option {
