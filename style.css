@@ -196,6 +196,7 @@ section h4 {
     padding: 20px;
     display: grid;
     justify-content: center;
+    border: 1px solid #dbdbdb
 }
 
 .box img {
@@ -271,7 +272,7 @@ footer {
     display:flex;
     text-align: center;
     flex-direction: column;
-    padding: 20px;
+    padding: 50px 20px;
     margin: 0.5vw;
     margin-top: 0px;
     border-radius: 5px;
