@@ -27,7 +27,7 @@ header h3 {
     margin-right: 10px
 }
 
-.container {
+.css-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@ header h3 {
 }
 
 @media (min-width: 400px) {
-    .card {
+    .css-card {
         width: 100%;
         max-width: 1000px;
         background-color: #f3f3f3;
@@ -69,7 +69,7 @@ main {
     border-radius: 5px;
 }
 
-.bingkai {
+.css-bingkai {
     width: 70%;
     min-width: 70px;
     border-radius: 50%;
@@ -145,7 +145,7 @@ nav a:hover {
     transform: scale(1.03);
 } */
 
-.skill-bar {
+.css-skill-bar {
     width: 70%;
     height: 5px;
     background-color: #383838;
@@ -156,7 +156,7 @@ nav a:hover {
     padding: 2px
 }
 
-.skill-level {
+.css-skill-level {
     height: 100%;
     background-color: white;
     border-radius: 5px;
@@ -186,7 +186,7 @@ section h4 {
     margin-right: 2vw;
 }
 
-.box {
+.css-box {
     border-radius: 15px;
     box-shadow: 0 1px 2px #cfcfcf;
     background-color: rgb(255, 255, 255);
@@ -197,7 +197,7 @@ section h4 {
     border: 1px solid #dbdbdb;
 }
 
-.box img {
+.css-box img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;
@@ -206,17 +206,17 @@ section h4 {
     object-fit: cover;
     filter:brightness(70%)
 }
-.box img:hover {
+.css-box img:hover {
     filter:brightness(90%)
 }
 
-.box p {
+.css-box p {
     line-height: 1.4;
     margin: 0 15px 15px 15px;
     text-align: left;
 }
 
-.box h4 {
+.css-box h4 {
     margin: 0;
     line-height: 1.4;
     margin: 15px 0 15px 15px;
@@ -242,7 +242,7 @@ textarea {
     margin-bottom: 10px
 }
 
-.button {
+.css-button {
     border-radius: 10px;
     background-color: #383838;
     padding-left: 40px;
@@ -254,7 +254,7 @@ textarea {
     margin-bottom: 30px
 }
 
-.format {
+.css-format {
     border-radius: 5px;
     width: 95%;
     padding: 5px;
