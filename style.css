@@ -195,6 +195,7 @@ section h4 {
     margin-bottom: 10px;
     display: grid;
     border: 1px solid #dbdbdb;
+    margin-top: 10px
 }
 
 .css-box img {
