@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset with Legend Example</title>
+    <style>
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 1.5em 1em 1em 1em; /* Tambahkan padding untuk mengatasi potongan border */
+            position: relative;
+        }
+
+        legend {
+            padding: 0 10px; /* Tambahkan padding pada legend */
+            font-weight: bold;
+        }
+
+        /* Trik untuk mengatasi border yang terpotong */
+        fieldset::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: calc(100% - 20px); /* Sesuaikan dengan padding legend */
+            background: #ccc;
+            position: absolute;
+            top: 0;
+            left: 10px; /* Sesuaikan dengan padding legend */
+        }
+
+        fieldset legend::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: white; /* Warna background yang sama dengan fieldset */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Example Legend</legend>
+        <p>This is an example fieldset with a legend.</p>
+    </fieldset>
+</body>
+</html>
