@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fieldset with Legend Example</title>
+    <title>Horizontal Scrollable Content Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-        fieldset {
+        .scrollable-horizontal {
+            width: 300px;
+            height: 100px;
+            overflow-x: auto; /* Menambahkan scrollbar horizontal */
+            white-space: nowrap; /* Mencegah teks membungkus ke baris baru */
             border: 1px solid #ccc;
-            padding: 1.5em 1em 1em 1em; /* Tambahkan padding untuk mengatasi potongan border */
-            position: relative;
+            padding: 10px;
         }
-
-        legend {
-            padding: 0 10px; /* Tambahkan padding pada legend */
-            font-weight: bold;
-        }
-
-        /* Trik untuk mengatasi border yang terpotong */
-        fieldset::before {
-            content: "";
-            display: block;
-            height: 1px;
-            width: calc(100% - 20px); /* Sesuaikan dengan padding legend */
-            background: #ccc;
-            position: absolute;
-            top: 0;
-            left: 10px; /* Sesuaikan dengan padding legend */
-        }
-
-        fieldset legend::before {
-            content: "";
-            display: block;
-            height: 1px;
-            width: 100%;
-            background: white; /* Warna background yang sama dengan fieldset */
-            position: absolute;
-            top: 0;
-            left: 0;
+        .scrollable-horizontal p {
+            display: inline-block; /* Menjadikan paragraf sebagai elemen inline-block */
+            margin-right: 20px; /* Menambahkan jarak antar paragraf */
         }
     </style>
 </head>
 <body>
-    <fieldset>
-        <legend>Example Legend</legend>
-        <p>This is an example fieldset with a legend.</p>
-    </fieldset>
+    <div class="scrollable-horizontal">
+        <p>This is a scrollable content area.</p>
+        <p>Add more content here.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Consectetur adipiscing elit.</p>
+        <p>Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Collapse Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button with data-bs-target
+    </button>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+    </div>
+
 </body>
 </html>
+
