@@ -269,6 +269,15 @@ textarea {
     height: 40px
 }
 
+.css-button-show-local {
+    border: 0;
+    margin: 2vw;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: white;
+    padding: 0
+}
+
 .css-format-local {
     border-radius: 5px;
     width: 95%;
