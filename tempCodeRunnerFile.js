@@ -1,1 +1,0 @@
-date="14 November 2003"
