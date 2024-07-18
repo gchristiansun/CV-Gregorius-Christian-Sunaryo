@@ -5,6 +5,7 @@ header {
     margin: 0.5vw;
     background-color: #383838;
     border-radius: 5px;
+    padding: 20px
 }
 
 header h2 {
@@ -12,7 +13,8 @@ header h2 {
     margin: 40px 10px 30px 10px;
     color: white;
     /* font-size: 100%; */
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 header h3 {
@@ -83,7 +85,7 @@ main {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 aside p {
@@ -159,7 +161,7 @@ nav a:hover {
 
 .css-skill-bar-local {
     width: 70%;
-    height: 5px;
+    height: 7px;
     background-color: #383838;
     border-radius: 5px;
     overflow: hidden;
@@ -205,7 +207,7 @@ section h4 {
     border-radius: 15px;
     box-shadow: 0 1px 2px #cfcfcf;
     background-color: rgb(255, 255, 255);
-    width: 240px;
+    width: 260px;
     margin-left: 1vw;
     margin-bottom: 10px;
     display: grid;
@@ -312,7 +314,7 @@ aside hr {
     height: 1px;
     border: none;
     margin-left: 25px;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 footer {
@@ -320,7 +322,7 @@ footer {
     display:flex;
     text-align: center;
     flex-direction: column;
-    padding: 50px 20px;
+    padding: 30px;
     margin: 0.5vw;
     margin-top: 0px;
     border-radius: 5px;
@@ -328,6 +330,7 @@ footer {
 
 footer h4 {
     color: white;
+    margin-bottom: 10px 0 10px 0;
 }
 
 footer p {
