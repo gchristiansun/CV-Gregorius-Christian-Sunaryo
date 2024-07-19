@@ -5,7 +5,22 @@ header {
     margin: 0.5vw;
     background-color: #383838;
     border-radius: 5px;
-    padding: 20px
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin: 0.5vw;
+        background-color: #383838;
+        border-radius: 5px;
+        padding: 20px;
+        height: 90vh;
+        transition: transform 1s ease
+    }
 }
 
 header h2 {
@@ -41,7 +56,7 @@ header h3 {
     padding-left: 3vw;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 420px) {
     .css-card-local {
         width: 100%;
         max-width: 1000px;
@@ -342,5 +357,9 @@ footer p {
 .css-grid-local {
     display: grid;
     margin-right: 5px;
+}
+
+.hidden {
+    transform: translateX(-100%);
 }
 
