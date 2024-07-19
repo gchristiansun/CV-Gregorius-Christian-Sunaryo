@@ -37,8 +37,8 @@ header h3 {
 .css-container-section-local {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: start;
+    padding-left: 3vw;
 }
 
 @media (min-width: 400px) {
@@ -57,8 +57,6 @@ header h3 {
 body {
     display: flex;
     justify-content: center;
-    transform: scale(0.67);
-    transform-origin: top center;
 }
 
 aside {
@@ -68,6 +66,7 @@ aside {
     margin-top: 0;
     border-radius: 5px;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 main {
@@ -244,7 +243,7 @@ section h4 {
 }
 
 fieldset {
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 10px;
     margin-left: 3vw;
     margin-right: 3vw;
@@ -339,3 +338,9 @@ footer p {
     color: white;
     margin-bottom: 20px
 }
+
+.css-grid-local {
+    display: grid;
+    margin-right: 5px;
+}
+
