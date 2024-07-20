@@ -1,8 +1,8 @@
 window.addEventListener('scroll', function() {
-var box = document.querySelector('header');
+var header = document.querySelector('header');
 if (window.scrollY > 450) {
-    box.classList.add('hidden');
+    header.classList.add('hidden');
 } else {
-    box.classList.remove('hidden');
+    header.classList.remove('hidden');
 }
 });
