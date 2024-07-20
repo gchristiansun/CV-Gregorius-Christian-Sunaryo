@@ -10,6 +10,7 @@ if (window.scrollY > 450) {
 document.addEventListener('DOMContentLoaded', (event) => {
     const typingElement = document.getElementById('typing');
     const constantElement = document.getElementById('constant');
+    const constant2Element = document.getElementById('constant2');
     const textArray = ["Welcome to my website!", "I'm Gregorius Christian Sunaryo"];
     let arrayIndex = 0;
     let charIndex = 0;
@@ -35,10 +36,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
     
-    if (window.innerWidth < 420) {
-        constantElement.style.display = 'none';
-        type();
-      } else {
-        typingElement.style.display = 'none';
-      }
+    function layoutChange() {
+        if (window.innerWidth < 420) {
+            constantElement.style.display = 'none';
+            constant2Element.style.display = 'none';
+            type();
+            } else {
+            typingElement.style.display = 'none';
+            }
+        }
+
+    layoutChange()
+
+    window.addEventListener('resize', function() {
+        layoutChange();
+        window.location.reload(true)
+    });
+
+
 });
