@@ -19,7 +19,7 @@ header {
         border-radius: 5px;
         padding: 20px;
         height: 100vh;
-        transition: transform 1s ease;
+        transition: transform 1.5s ease;
         outline: 1px solid #fff
     }
 }
