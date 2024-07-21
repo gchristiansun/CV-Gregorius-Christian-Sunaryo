@@ -50,10 +50,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     window.addEventListener('resize', function() {
         layoutChange();
-        window.location.reload(true)
+        window.location.reload()
     });
 
 
 });
-
-layoutChange();
