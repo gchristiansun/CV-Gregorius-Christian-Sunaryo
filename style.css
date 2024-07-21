@@ -259,7 +259,7 @@ section h4 {
 }
 
 fieldset {
-    border-radius: 7px;
+    border-radius: 10px;
     padding: 10px;
     margin-left: 3vw;
     margin-right: 3vw;
@@ -267,8 +267,8 @@ fieldset {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(1, 0.9fr);
-    border: 1px solid black;
-    
+    /* border: 1px solid black; */
+    background-color: #383838;
 }
 
 textarea {
@@ -276,7 +276,8 @@ textarea {
     width: 95%;
     height: 150px;
     padding: 5px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    background-color: #f3f3f3;
 }
 
 .css-button-local {
@@ -301,17 +302,20 @@ textarea {
     border-radius: 5px;
     width: 95%;
     padding: 5px;
+    background-color: #f3f3f3;
 }
  
 label {
     margin-top: 20px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    color: white
 }
 
 select {
     border-radius: 5px;
     width: 95%;
     padding: 5px;
+    background-color: #f3f3f3;
 }
 
 option {

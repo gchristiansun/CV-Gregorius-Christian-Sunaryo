@@ -7,7 +7,6 @@ if (window.scrollY > 450) {
 }
 });
 
-let count = 1;
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const typingElement = document.getElementById('typing');
@@ -47,8 +46,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         else {
             typingElement.style.display = 'none';
             }
-
         }
 
+    document.addEventListener('resize', function() { 
+        layoutChange()
+        location.reload(true)
+    })
+
     layoutChange()
-});
+})
