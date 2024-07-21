@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
-    document.addEventListener('resize', function() { 
-        layoutChange()
-        location.reload(true)
+    window.addEventListener('resize', function() { 
+        layoutChange();
+        location.reload(true);
     })
 
     layoutChange()
