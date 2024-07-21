@@ -48,27 +48,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
-    // window.addEventListener('resize', function() { 
-    //     layoutChange();
-    //     location.reload(true);
-    // })
-
     layoutChange()
 
     let initialWidth = window.innerWidth;
     let initialHeight = window.innerHeight;
 
     window.addEventListener('resize', function() {
-        // Periksa perubahan ukuran jendela
         let currentWidth = window.innerWidth;
         let currentHeight = window.innerHeight;
         
-        if (Math.abs(currentWidth - initialWidth) > 10 || Math.abs(currentHeight - initialHeight) > 10) {
-            // Jika ukuran berubah lebih dari 10 piksel, jalankan fungsi
+        if (Math.abs(currentWidth - initialWidth) > 10 || Math.abs(currentHeight - initialHeight) > 10 || initialWidth != currentWidth || initialHeight != currentHeight) {
             layoutChange();
             location.reload();
             
-            // Perbarui ukuran awal jendela
             initialWidth = currentWidth;
             initialHeight = currentHeight;
         }
