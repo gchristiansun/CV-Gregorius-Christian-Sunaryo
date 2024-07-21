@@ -7,7 +7,7 @@ if (window.scrollY > 450) {
 }
 });
 
-let hasRefreshed = false;
+let count = 1;
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const typingElement = document.getElementById('typing');
@@ -39,23 +39,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
     
     function layoutChange() {
-        if (window.innerWidth < 470 && !hasRefreshed) {
+        if (window.innerWidth < 470) {
             constantElement.style.display = 'none';
             constant2Element.style.display = 'none';
             type();
-            window.addEventListener('resize', function() {
-                hasRefreshed = true;
-                layoutChange();
-                window.location.reload()
-            });
-            } else {
+            } 
+        else {
             typingElement.style.display = 'none';
-            window.addEventListener('resize', function() {
-                hasRefreshed = true;
-                layoutChange();
-                window.location.reload()
-            });
             }
+
         }
 
     layoutChange()
