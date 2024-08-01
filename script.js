@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let currentWidth = window.innerWidth;
         let currentHeight = window.innerHeight;
         
-        if (Math.abs(currentWidth - initialWidth) > 10 || Math.abs(currentHeight - initialHeight) > 10 || initialWidth != currentWidth || initialHeight != currentHeight) {
+        if (Math.abs(currentWidth - initialWidth) > 50 || Math.abs(currentHeight - initialHeight) > 50 || initialWidth != currentWidth || initialHeight != currentHeight) {
             layoutChange();
             location.reload();
             

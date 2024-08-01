@@ -36,6 +36,7 @@
         <div class="css-container-local">
             <aside>
                 <img src="assets/foto_diri.jpg" alt="image" class="css-bingkai-local">
+
                 <h2>Personal Information</h2>
                 <hr>
                 <ul>
@@ -43,6 +44,7 @@
                     <li>Date Birth: 17/12/2004</li>
                     <li>Citizenship: WNI</li>
                 </ul>
+
                 <h2>Media Social</h2>
                 <hr>
                 <p class="bi bi-whatsapp"><a href="https://api.whatsapp.com/send?phone=6283152445609&text=Hello%20from%20WhatsApp">WhatsApp</a></p>
@@ -72,6 +74,15 @@
                 <div class="css-skill-bar-local">
                     <div class="css-skill-level-local" style="width: 70%"></div>
                 </div>
+
+                <h2>Skill</h2>
+                <hr>
+                <h4>Bootstrap</h4>
+                <div class="css-skill-bar-local">
+                    <div class="css-skill-level-local" style="width: 30%"></div>
+                </div>
+
+               
             </aside>
             <main>
                 <section id="about">
@@ -149,6 +160,23 @@
                             <h4>18 July 2024</h4>
                             <p>JavaScript Introduction</p>
                         </div>
+                        <div class="css-box-local">
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/shortclass_js.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/JavaScript_Practice.png" class="d-block w-100" alt="...">
+                                </div>
+                                <!-- <div class="carousel-item">
+                                    <img src="assets/sertifikat1.png" class="d-block w-100" alt="...">
+                                </div> -->
+                                </div>
+                            </div>
+                            <h4>06-28 July 2024</h4>
+                            <p>Bootcamp Front End Web Developer</p>
+                        </div>
                     </div>
                 </section>
 
@@ -177,19 +205,13 @@
                     <form action="https://formspree.io/f/mvgpglda" method="post">
                         <fieldset>
                             <label for="name">Full Name:</label>
-                            <input class="css-format-local" type="text" id="name" name="name" required>
+                            <input class="css-format-local" type="text" id="name" name="name" placeholder="Name" required>
 
                             <label for="email">Email:</label>
-                            <input class="css-format-local" type="email" id="email" name="email" required>
-
-                            <label for="jenis_kelamin">Gender:</label>
-                            <select id="jenis_kelamin" name="jenis_kelamin" required>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
+                            <input class="css-format-local" type="email" id="email" name="email" placeholder="example@gmail.com" required>
 
                             <label for="message">Message:</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" placeholder="type here" required></textarea>
                         </fieldset>
                         <br>
                         <input class="css-button-local" type="submit" value="Send">
