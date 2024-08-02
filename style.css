@@ -50,6 +50,15 @@ header h3 {
     flex-wrap: wrap;
 }
 
+/* .css-container-infinite-scroll {
+    display: grid;
+    grid-template-columns: repeat(8, 0.9fr);
+    overflow-x: hidden;
+    max-width: 650px;
+    min-width: 50px;
+    width: 100%;
+} */
+
 .css-container-section-local {
     width: 100%;
     display: flex;
@@ -91,7 +100,7 @@ main {
     margin: 10px;
     margin-top: 0;
     border-radius: 5px;
-    padding: 0 0 20px 0
+    padding: 0 0 20px 0;
 }
 
 .css-bingkai-local {
@@ -228,9 +237,9 @@ section h4 {
     width: 260px;
     margin-left: 1vw;
     margin-bottom: 10px;
-    display: grid;
+    display: inline-block;
     border: 1px solid #dbdbdb;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .css-box-local img {
@@ -371,7 +380,14 @@ footer p {
 .hidden {
     opacity: 50%;
 }
-
-
+/* 
+@keyframes infinite-scroll {
+    form {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+} */
 
 

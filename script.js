@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
     
     function layoutChange() {
-        if (window.innerWidth < 470) {
+        if (window.innerWidth < 550) {
             constantElement.style.display = 'none';
             constant2Element.style.display = 'none';
             type();

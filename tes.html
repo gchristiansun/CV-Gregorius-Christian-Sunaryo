@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menambahkan dan Mengambil Cookies</title>
+</head>
+<body>
+    <h1>Cookie Example</h1>
+    <button id="set-cookie">Set Cookie</button>
+    <button id="get-cookie">Get Cookie</button>
+    <button id="delete-cookie">Delete Cookie</button>
+    <p id="cookie-output"></p>
+
+    <script>
+        // Fungsi untuk menyimpan cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
+        }
+
+        // Fungsi untuk mengambil cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Fungsi untuk menghapus cookie
+        function eraseCookie(name) {
+            document.cookie = name + '=; Max-Age=-99999999;';
+        }
+
+        // Event listeners untuk tombol
+        document.getElementById('set-cookie').addEventListener('click', () => {
+            setCookie('userVisit', 'true', 7); // Menyimpan cookie selama 7 hari
+            document.getElementById('cookie-output').textContent = 'Cookie "userVisit" disetel!';
+        });
+
+        document.getElementById('get-cookie').addEventListener('click', () => {
+            const cookieValue = getCookie('userVisit');
+            document.getElementById('cookie-output').textContent = cookieValue ? `Cookie "userVisit" ada: ${cookieValue}` : 'Cookie "userVisit" tidak ada!';
+        });
+
+        document.getElementById('delete-cookie').addEventListener('click', () => {
+            eraseCookie('userVisit');
+            document.getElementById('cookie-output').textContent = 'Cookie "userVisit" dihapus!';
+        });
+    </script>
+</body>
+</html>
