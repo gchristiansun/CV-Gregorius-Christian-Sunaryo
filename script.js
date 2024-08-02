@@ -50,21 +50,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     layoutChange()
 
-    let initialWidth = window.innerWidth;
-    let initialHeight = window.innerHeight;
+    let initialOrientation = window.orientation;
 
-    window.addEventListener('resize', function() {
-        let currentWidth = window.innerWidth;
-        let currentHeight = window.innerHeight;
+    window.addEventListener('orientationchange', function() {
+        let currentOrientation = window.orientation;
         
-        if (Math.abs(currentWidth - initialWidth) > 50 || Math.abs(currentHeight - initialHeight) > 50 || initialWidth != currentWidth || initialHeight != currentHeight) {
+        if (currentOrientation !== initialOrientation) {
             layoutChange();
             location.reload();
-            
-            initialWidth = currentWidth;
-            initialHeight = currentHeight;
+            initialOrientation = currentOrientation;
         }
     });
+    
 })
 
 document.addEventListener('DOMContentLoaded', () => {
