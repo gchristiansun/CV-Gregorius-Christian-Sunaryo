@@ -77,7 +77,55 @@ header h3 {
         overflow: hidden;
         font-family: Arial, Helvetica, sans-serif;
     }
+
+    .css-box-local-footer {
+        bottom: 2px;
+        color: white;
+        background-color: #383838;
+        padding: 5px;
+        text-align: center;
+        border-radius: 10px;
+        position: absolute;
+        transform: translate(0px, 25px);
+        opacity: 0.8;
+        z-index: 100;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        color: white !important;
+        text-decoration: none;
+        margin: 10px 2vw 10px 2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #757474;
+        border-radius: 5px;
+        padding: 0.3vw;
+        width: 90px;
+        text-align: center;
+    }
 }
+
+@media (max-width: 420px) {
+    nav a {
+        font-size: 0.8rem;
+        color: white !important;
+        text-decoration: none;
+        margin: 10px 2vw 10px 2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    nav hr {
+        background-color: white;
+        margin: 0px 10px 0px 10px;
+    }
+
+    .navbar-toggler {
+        color: white !important;
+        border: 1px solid
+    }
+}
+
 
 body {
     display: flex;
@@ -160,19 +208,6 @@ nav {
     flex-wrap: wrap;
 }
 
-nav a {
-    font-size: 0.8rem;
-    color: white !important;
-    text-decoration: none;
-    margin: 10px 2vw 10px 2vw;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #757474;
-    border-radius: 5px;
-    padding: 0.3vw;
-    width: 90px;
-    text-align: center;
-}
-
 nav a:hover {
     box-shadow: 0 3px 6px #a0a0a0;
     color: white;
@@ -228,7 +263,7 @@ section h4 {
 }
 
 .css-box-local {
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 1px 2px #cfcfcf;
     background-color: rgb(255, 255, 255);
     width: 260px;
@@ -240,8 +275,8 @@ section h4 {
 }
 
 .css-box-local img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     width: 100%;
     height: 130px;
     cursor: pointer;
@@ -251,6 +286,8 @@ section h4 {
 .css-box-local img:hover {
     filter:brightness(90%)
 }
+
+
 
 .css-box-local p {
     line-height: 1.4;
