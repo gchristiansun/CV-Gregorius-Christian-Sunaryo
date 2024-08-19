@@ -80,3 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('likeCount', count);
     });
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const lineElement = document.getElementsByClassName('line');
+    if (window.innerWidth >= 420) {
+        lineElement.style.display = 'none'
+        } 
+})
+
+
