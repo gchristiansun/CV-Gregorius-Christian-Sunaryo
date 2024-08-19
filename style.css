@@ -161,7 +161,7 @@ header h3 {
 
     main {
         flex: 3.5;
-        max-width: 370px;
+        max-width: 340px;
         background-color: rgb(255, 255, 255);
         margin: 10px;
         margin-top: 0;
@@ -181,6 +181,17 @@ header h3 {
         border: 1px solid #dbdbdb;
         margin-top: 10px;
         position: relative;
+    }
+
+    fieldset {
+        border-radius: 20px;
+        padding: 10px 5px;
+        /* margin-top: 3vw; */
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 0.9fr);
+        border: none;
+        background-color: #f3f3f3;
     }
 }
 
