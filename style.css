@@ -168,6 +168,19 @@ header h3 {
         border-radius: 5px;
         padding: 0 0 20px 0;
     }
+
+    .css-box-local {
+        border-radius: 10px;
+        box-shadow: 0 1px 2px #cfcfcf;
+        background-color: rgb(255, 255, 255);
+        width: 200px;
+        margin-left: 1vw;
+        margin-bottom: 10px;
+        display: inline-block;
+        border: 1px solid #dbdbdb;
+        margin-top: 10px;
+        position: relative;
+    }
 }
 
 
