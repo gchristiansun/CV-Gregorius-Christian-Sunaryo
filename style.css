@@ -50,6 +50,21 @@ header h3 {
     flex-wrap: wrap;
 }
 
+.css-container-horizontal {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
 /* .css-container-infinite-scroll {
     display: grid;
     grid-template-columns: repeat(8, 0.9fr);
@@ -152,6 +167,8 @@ aside {
 
 main {
     flex: 3.5;
+    max-width: 700px;
+    min-width: 400px;
     background-color: rgb(255, 255, 255);
     margin: 10px;
     margin-top: 0;
@@ -272,7 +289,7 @@ section h4 {
 }
 
 .css-box-local {
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 1px 2px #cfcfcf;
     background-color: rgb(255, 255, 255);
     width: 260px;
@@ -285,8 +302,8 @@ section h4 {
 }
 
 .css-box-local img {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
     height: 130px;
     cursor: pointer;
@@ -369,7 +386,7 @@ textarea {
 label {
     margin-top: 10px;
     margin-bottom: 5px;
-    color: white
+    color: #383838
 }
 
 select {
