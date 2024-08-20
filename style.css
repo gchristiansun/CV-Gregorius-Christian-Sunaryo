@@ -227,8 +227,8 @@ header h3 {
         z-index: 1;
         justify-content: center;
         text-align: center;
-        transition: bottom 1s ease;
-        bottom: -50px 
+        transition: bottom 2s ease;
+        bottom: -100px 
     }
 
     .navigasi {
