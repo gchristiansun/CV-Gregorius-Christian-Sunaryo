@@ -32,7 +32,7 @@ header {
     }
 
     .hidden-nav {
-        transform: translateY(80%);
+        bottom: 20px;
         position: fixed;
     }
 }
