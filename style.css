@@ -182,7 +182,7 @@ header h3 {
         flex: 1.5;
         max-width: 340px;
         background-color: white;
-        margin: 0px 0px 10px 10px;
+        margin: 0px 0px 10px 0px;
         border-radius: 5px;
         justify-content: center;
         padding-bottom: 20px;
