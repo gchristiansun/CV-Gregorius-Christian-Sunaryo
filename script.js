@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (window.innerWidth < 550) {
             constantElement.style.display = 'none';
             constant2Element.style.display = 'none';
-            // image.style.display = 'none'
+            image.style.display = 'none'
             type();
             } 
         else {
@@ -67,13 +67,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
     
-})
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const lineElement = document.getElementsByClassName('line');
-    if (window.innerWidth >= 420) {
-        lineElement.style.display = 'none'
-        } 
 })
 
 

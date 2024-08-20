@@ -16,9 +16,8 @@ header {
         justify-content: center;
         margin: 0;
         background-color: #383838;
-        border-radius: 5px;
         padding: 20px;
-        height: 100vh;
+        height: 96vh;
         transition: transform 1s ease;
         outline: 1px solid #fff;
         position: fixed;
@@ -519,12 +518,12 @@ footer p {
 } */
 
 .cover-container-local {
-    height: 80vh;
-    margin: 70px 10px 70px 0px;
+    height: 600px;
+    margin: 100px 0px 150px 0px;
     background-color: #383838;
     border: 1px solid #383838;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
 }
 
 .title-cover-local {
@@ -538,8 +537,12 @@ footer p {
     text-align: center;
     margin: 10px 30px 20px 30px;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.5;
     font-weight: 500;
+}
+
+#typing {
+    font-weight: 400;
 }
 
