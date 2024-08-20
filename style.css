@@ -520,11 +520,11 @@ footer p {
 
 .cover-container-local {
     height: 80vh;
-    margin: 70px 0px 70px 0px;
+    margin: 70px 10px 70px 0px;
     background-color: #383838;
     border: 1px solid #383838;
     border-radius: 10px;
-    width: 100%;;
+    width: 90%;
 }
 
 .title-cover-local {
