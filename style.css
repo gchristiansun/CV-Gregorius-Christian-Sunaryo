@@ -150,27 +150,13 @@ header h3 {
 }
 
 @media (max-width: 430px) {
-    nav hr {
-        background-color: white;
-        margin: 0px 10px 0px 10px;
-    }
-
     nav a {
         text-decoration: none;
-        margin: 10px 15px
+        margin: 10px 15px;
     }
 
     nav i {
         color: white
-    }
-
-    .navbar-toggler {
-        color: white !important;
-        border: 1px solid
-    }
-
-    .navbar-toggler-icon {
-        color: white !important;
     }
 
     main {
@@ -230,7 +216,7 @@ header h3 {
     }
 
     nav {
-        /* position: fixed !important; */
+        position: fixed;
         /* bottom: px !important; */
         display: flex;
         justify-content: center;
@@ -241,9 +227,31 @@ header h3 {
         z-index: 1;
         justify-content: center;
         text-align: center;
-        transition: transform 0.5s ease;
+        transition: bottom 1s ease;
+        bottom: -50px 
+    }
+
+    .navigasi {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        background-color: #383838bd ;
+        border-radius: 10px;
+        z-index: 1;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navigasi a {
+        text-decoration: none;
+        margin: 10px 15px;
+    }
+
+    .navigasi i {
+        color: white
     }
 }
+
 
 
 body {
@@ -294,12 +302,6 @@ aside li {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* filter: blur(2px); */
-}
-
-nav a:hover {
-    box-shadow: 0 3px 6px #a0a0a0;
-    color: white;
 }
 
 /* nav:hover {

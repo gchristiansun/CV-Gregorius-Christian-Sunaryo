@@ -9,10 +9,10 @@ if (window.scrollY > 0) {
 
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');
-    if (window.scrollY > 200) {
+    if (window.scrollY > 400) {
         nav.classList.add('hidden-nav');
     } else {
-        nav.classList.remove('hidden-nav');
+        nav.classList.remove('hidden-nav')
     }
     });
 

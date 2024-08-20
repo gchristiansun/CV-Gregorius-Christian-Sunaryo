@@ -3,113 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunci Layar</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        #lockScreen {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            color: white;
-            z-index: 9999;
-            flex-direction: column;
-        }
-
-        #lockScreen input {
-            padding: 10px;
-            margin-top: 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        #unlockBtn {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        #unlockBtn:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>Scroll Down Event Listener</title>
 </head>
 <body>
-
-    <div id="lockScreen">
-        <h2>Layar Terkunci</h2>
-        <input type="password" id="password" placeholder="Masukkan kata sandi">
-        <button id="unlockBtn">Buka Kunci</button>
+    <div style="height: 2000px;">
+        <h1>Scroll down to see the event in action</h1>
     </div>
 
     <script>
-        let lockScreen = document.getElementById('lockScreen');
-        let unlockBtn = document.getElementById('unlockBtn');
-        let passwordInput = document.getElementById('password');
-        let correctPassword = "1234"; // Kata sandi yang diatur
+        let lastScrollTop = 0;
 
-        // Fungsi untuk menampilkan layar kunci
-        function showLockScreen() {
-            lockScreen.style.display = "flex";
-        }
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // Fungsi untuk menyembunyikan layar kunci
-        function hideLockScreen() {
-            lockScreen.style.display = "none";
-        }
-
-        // Deteksi aktivitas pengguna dan menampilkan layar kunci setelah 5 menit tidak aktif
-        let inactivityTime = function () {
-            let time;
-            window.onload = resetTimer;
-            document.onmousemove = resetTimer;
-            document.onkeypress = resetTimer;
-
-            function lockScreenAfterInactivity() {
-                showLockScreen();
-            }
-
-            function resetTimer() {
-                clearTimeout(time);
-                time = setTimeout(lockScreenAfterInactivity, 300000);  // 5 menit (300000 ms)
-            }
-        };
-
-        // Panggil fungsi deteksi aktivitas
-        inactivityTime();
-
-        // Event listener untuk tombol buka kunci
-        unlockBtn.addEventListener('click', function () {
-            let enteredPassword = passwordInput.value;
-            if (enteredPassword === correctPassword) {
-                hideLockScreen();
-                passwordInput.value = ""; // Kosongkan input
+            if (scrollTop > lastScrollTop) {
+                // User is scrolling down
+                console.log("Scrolling down");
             } else {
-                alert("Kata sandi salah!");
+                // User is scrolling up
+                console.log("Scrolling up");
             }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Menghindari nilai negatif pada scroll
         });
     </script>
-
 </body>
 </html>
