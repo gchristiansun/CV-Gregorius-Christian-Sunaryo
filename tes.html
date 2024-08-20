@@ -3,59 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menambahkan dan Mengambil Cookies</title>
+    <title>Kunci Layar</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #lockScreen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 9999;
+            flex-direction: column;
+        }
+
+        #lockScreen input {
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #unlockBtn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #unlockBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Cookie Example</h1>
-    <button id="set-cookie">Set Cookie</button>
-    <button id="get-cookie">Get Cookie</button>
-    <button id="delete-cookie">Delete Cookie</button>
-    <p id="cookie-output"></p>
+
+    <div id="lockScreen">
+        <h2>Layar Terkunci</h2>
+        <input type="password" id="password" placeholder="Masukkan kata sandi">
+        <button id="unlockBtn">Buka Kunci</button>
+    </div>
 
     <script>
-        // Fungsi untuk menyimpan cookie
-        function setCookie(name, value, days) {
-            let expires = "";
-            if (days) {
-                const date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "expires=" + date.toUTCString();
+        let lockScreen = document.getElementById('lockScreen');
+        let unlockBtn = document.getElementById('unlockBtn');
+        let passwordInput = document.getElementById('password');
+        let correctPassword = "1234"; // Kata sandi yang diatur
+
+        // Fungsi untuk menampilkan layar kunci
+        function showLockScreen() {
+            lockScreen.style.display = "flex";
+        }
+
+        // Fungsi untuk menyembunyikan layar kunci
+        function hideLockScreen() {
+            lockScreen.style.display = "none";
+        }
+
+        // Deteksi aktivitas pengguna dan menampilkan layar kunci setelah 5 menit tidak aktif
+        let inactivityTime = function () {
+            let time;
+            window.onload = resetTimer;
+            document.onmousemove = resetTimer;
+            document.onkeypress = resetTimer;
+
+            function lockScreenAfterInactivity() {
+                showLockScreen();
             }
-            document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
-        }
 
-        // Fungsi untuk mengambil cookie
-        function getCookie(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            function resetTimer() {
+                clearTimeout(time);
+                time = setTimeout(lockScreenAfterInactivity, 300000);  // 5 menit (300000 ms)
             }
-            return null;
-        }
+        };
 
-        // Fungsi untuk menghapus cookie
-        function eraseCookie(name) {
-            document.cookie = name + '=; Max-Age=-99999999;';
-        }
+        // Panggil fungsi deteksi aktivitas
+        inactivityTime();
 
-        // Event listeners untuk tombol
-        document.getElementById('set-cookie').addEventListener('click', () => {
-            setCookie('userVisit', 'true', 7); // Menyimpan cookie selama 7 hari
-            document.getElementById('cookie-output').textContent = 'Cookie "userVisit" disetel!';
-        });
-
-        document.getElementById('get-cookie').addEventListener('click', () => {
-            const cookieValue = getCookie('userVisit');
-            document.getElementById('cookie-output').textContent = cookieValue ? `Cookie "userVisit" ada: ${cookieValue}` : 'Cookie "userVisit" tidak ada!';
-        });
-
-        document.getElementById('delete-cookie').addEventListener('click', () => {
-            eraseCookie('userVisit');
-            document.getElementById('cookie-output').textContent = 'Cookie "userVisit" dihapus!';
+        // Event listener untuk tombol buka kunci
+        unlockBtn.addEventListener('click', function () {
+            let enteredPassword = passwordInput.value;
+            if (enteredPassword === correctPassword) {
+                hideLockScreen();
+                passwordInput.value = ""; // Kosongkan input
+            } else {
+                alert("Kata sandi salah!");
+            }
         });
     </script>
+
 </body>
 </html>
