@@ -18,9 +18,17 @@ header {
         background-color: #383838;
         border-radius: 5px;
         padding: 20px;
-        height: 95vh;
-        transition: transform 1.5s ease;
-        outline: 1px solid #fff
+        height: 100vh;
+        transition: transform 2s ease;
+        outline: 1px solid #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+    }
+
+    .hidden {
+        transform: translateY(-120%);
     }
 }
 
@@ -81,19 +89,6 @@ header h3 {
     padding-left: 3vw;
 }
 
-.css-box-local-footer {
-    top: 10px;
-    color: white;
-    background-color: #383838;
-    padding: 5px;
-    text-align: center;
-    border-radius: 10px;
-    position: absolute;
-    /* transform: translate(0px, 25px); */
-    opacity: 0.8;
-    z-index: 100;
-}
-
 @media (min-width: 420px) {
     .css-card-local {
         width: 100%;
@@ -104,19 +99,6 @@ header h3 {
         box-sizing: content-box;
         overflow: hidden;
         font-family: Arial, Helvetica, sans-serif;
-    }
-
-    nav a {
-        font-size: 0.8rem;
-        color: white !important;
-        text-decoration: none;
-        margin: 10px 2vw 10px 2vw;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #757474;
-        border-radius: 5px;
-        padding: 0.3vw;
-        width: 90px;
-        text-align: center;
     }
 
     nav hr {
@@ -132,22 +114,48 @@ header h3 {
         margin-top: 0;
         border-radius: 5px;
         padding: 0 0 20px 0;
+        height: 1200px;
+        overflow-y: scroll;
+    }
+
+    main::-webkit-scrollbar {
+        display: none;
+    }
+
+    aside {
+        flex: 1.5;
+        background-color: white;
+        margin: 0px 0px 10px 10px;
+        border-radius: 5px;
+        justify-content: center;
+        padding-bottom: 20px;
+        height: 100%;
+    }
+
+    .css-bingkai-local {
+        width: 70%;
+        min-width: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 420px) {
-    nav a {
-        font-size: 0.8rem;
-        color: white !important;
-        text-decoration: none;
-        margin: 10px 2vw 10px 2vw;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-    }
-
     nav hr {
         background-color: white;
         margin: 0px 10px 0px 10px;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav i {
+        color: white
     }
 
     .navbar-toggler {
@@ -173,25 +181,10 @@ header h3 {
         flex: 1.5;
         max-width: 340px;
         background-color: white;
-        margin: 10px;
-        margin-top: 0;
+        margin: 0px 0px 10px 10px;
         border-radius: 5px;
         justify-content: center;
         padding-bottom: 20px;
-    }
-
-    .css-box-local {
-        border-radius: 10px;
-        box-shadow: 0 1px 2px #cfcfcf;
-        background-color: rgb(255, 255, 255);
-        width: 200px;
-        gap: 10px;
-        /* margin-left: 1vw; */
-        margin-bottom: 10px;
-        display: inline-block;
-        border: 1px solid #dbdbdb;
-        margin-top: 10px;
-        position: relative;
     }
 
     fieldset {
@@ -204,33 +197,38 @@ header h3 {
         border: none;
         background-color: #f3f3f3;
     }
+
+    .css-box-local {
+        border-radius: 15px;
+        box-shadow: 0 1px 2px #cfcfcf;
+        background-color: rgb(255, 255, 255);
+        width: 250px;
+        margin-left: 1vw;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        display: inline-block;
+        border: 1px solid #dbdbdb;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .css-bingkai-local {
+        width: 70%;
+        min-width: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 
 body {
     display: flex;
     justify-content: center;
-}
-
-aside {
-    flex: 1.5;
-    background-color: white;
-    margin: 10px;
-    margin-top: 0;
-    border-radius: 5px;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-
-.css-bingkai-local {
-    width: 70%;
-    min-width: 70px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 aside p {
@@ -242,8 +240,12 @@ aside p {
 aside h2 {
     margin-left: 25px;
     margin-right: 20px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    background-color: #383838;
+    padding: 5px 15px;
+    border-radius: 10px ;
+    color: white
 }
 
 aside h4 {
@@ -269,15 +271,22 @@ aside li {
 
 nav {
     position: fixed !important;
-    top: 5px !important;
+    bottom: 15px !important;
     display: flex;
     justify-content: center;
     margin: 0.5vw;
-    background-color: #383838 ;
-    border-radius: 5px;
+    background-color: #383838bd ;
+    border-radius: 10px;
     z-index: 1;
-    /* flex-wrap: wrap; */
-    flex-direction: column !important;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* filter: blur(2px); */
 }
 
 nav a:hover {
@@ -335,10 +344,10 @@ section h4 {
 }
 
 .css-box-local {
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 1px 2px #cfcfcf;
     background-color: rgb(255, 255, 255);
-    width: 260px;
+    width: 250px;
     margin-left: 1vw;
     margin-bottom: 10px;
     display: inline-block;
@@ -348,8 +357,8 @@ section h4 {
 }
 
 .css-box-local img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 100%;
     height: 130px;
     cursor: pointer;
@@ -359,8 +368,6 @@ section h4 {
 .css-box-local img:hover {
     filter:brightness(90%)
 }
-
-
 
 .css-box-local p {
     line-height: 1.4;
@@ -373,6 +380,27 @@ section h4 {
     line-height: 1.4;
     margin: 15px 0 15px 15px;
     text-align: left;
+}
+
+.css-box-local-footer {
+    position: absolute;
+    top: 10px;
+    background-color: #3838388a;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+}
+
+.css-box-local-github {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #3838388a;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
 }
 
 fieldset {
@@ -466,8 +494,7 @@ footer {
     text-align: center;
     flex-direction: column;
     padding: 30px;
-    margin: 0.5vw;
-    margin-top: 0px;
+    margin: 0px 10px 10px 10px ;
     border-radius: 5px;
 }
 
@@ -481,10 +508,6 @@ footer p {
     margin-right: 5px;
 }
 
-.hidden {
-    opacity: 50%;
-}
-
 /* @keyframes infinite-scroll {
     form {
         transform: translateX(0);
@@ -493,4 +516,27 @@ footer p {
         transform: translateX(-100%);
     }
 } */
+
+.cover-container {
+    height: 80vh;
+    margin: 70px 0px;
+    background-color: #383838;
+    border: 1px solid #383838;
+    border-radius: 10px;
+}
+
+.title-cover {
+    margin: 60px 20px 20px 30px;
+    color: white;
+    font-size: 30px;
+}
+
+.text-cover {
+    text-align: center;
+    margin: 10px 30px 20px 30px;
+    color: white;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 500;
+}
 

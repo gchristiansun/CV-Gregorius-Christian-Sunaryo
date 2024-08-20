@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function() {
 var header = document.querySelector('header');
-if (window.scrollY > 450) {
+if (window.scrollY > 0) {
     header.classList.add('hidden');
 } else {
     header.classList.remove('hidden');
@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const typingElement = document.getElementById('typing');
     const constantElement = document.getElementById('constant');
     const constant2Element = document.getElementById('constant2');
+    const cover = document.getElementById('cover');
+    const image = document.getElementById('image')
     const textArray = ["Welcome to my website!", "I'm Gregorius Christian Sunaryo"];
     let arrayIndex = 0;
     let charIndex = 0;
@@ -41,10 +43,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (window.innerWidth < 550) {
             constantElement.style.display = 'none';
             constant2Element.style.display = 'none';
+            image.style.display = 'none'
             type();
             } 
         else {
             typingElement.style.display = 'none';
+            cover.style.display = 'none';
+            image.style.display = 'block'
             }
         }
 
