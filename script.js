@@ -7,6 +7,15 @@ if (window.scrollY > 0) {
 }
 });
 
+window.addEventListener('scroll', function() {
+    var nav = document.querySelector('nav');
+    if (window.scrollY > 200) {
+        nav.classList.add('hidden-nav');
+    } else {
+        nav.classList.remove('hidden-nav');
+    }
+    });
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const typingElement = document.getElementById('typing');
