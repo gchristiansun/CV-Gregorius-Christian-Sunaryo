@@ -3,29 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Down Event Listener</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="tes.css">
 </head>
 <body>
-    <div style="height: 2000px;">
-        <h1>Scroll down to see the event in action</h1>
-    </div>
+    <div class="rotating-light"></div>
 
-    <script>
-        let lastScrollTop = 0;
-
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > lastScrollTop) {
-                // User is scrolling down
-                console.log("Scrolling down");
-            } else {
-                // User is scrolling up
-                console.log("Scrolling up");
-            }
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Menghindari nilai negatif pada scroll
-        });
-    </script>
 </body>
 </html>

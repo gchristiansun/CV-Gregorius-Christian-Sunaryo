@@ -1,0 +1,31 @@
+.rotating-light {
+    width: 200px;
+    height: 200px;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    position: relative;
+    background-color: #222; /* Warna latar belakang untuk kontras */
+}
+
+.rotating-light::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    box-shadow: 0 0 20px 5px red;
+    animation: rotateLight 4s linear infinite;
+    transform-origin: center; /* Titik rotasi di tengah elemen */
+}
+
+@keyframes rotateLight {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
