@@ -11,7 +11,8 @@ window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');
     if (window.scrollY > 600) {
         nav.classList.add('hidden-nav');
-    } else {
+    } 
+    else {
         nav.classList.remove('hidden-nav')
     }
     });
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const constant2Element = document.getElementById('constant2');
     const cover = document.getElementById('cover');
     const image = document.getElementById('image')
+    const h_nav = document.getElementById('h-nav')
     const textArray = ["Welcome to my website!", "I'm Gregorius Christian Sunaryo"];
     let arrayIndex = 0;
     let charIndex = 0;
@@ -59,6 +61,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             typingElement.style.display = 'none';
             cover.style.display = 'none';
             image.style.display = 'block'
+            h_nav.style.display = 'none'
             }
         }
 
@@ -77,5 +80,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
     
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a i");
+
+    window.onscroll = () => {
+        let current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 500) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+    };
+});
 
 
