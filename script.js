@@ -9,14 +9,18 @@ if (window.scrollY > 0) {
 
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');
-    if (window.scrollY > 600) {
+     if (window.scrollY > 600) {
         nav.classList.add('hidden-nav');
+        nav.classList.remove('hidden-nav-h');
     } 
+    else if (this.window.scrollY == 0) {
+        nav.classList.add('hidden-nav-h');
+    }
     else {
         nav.classList.remove('hidden-nav')
+        nav.classList.remove('hidden-nav-h');
     }
     });
-
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const typingElement = document.getElementById('typing');

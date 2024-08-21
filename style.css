@@ -36,30 +36,10 @@ header {
         bottom: 30px;
         position: fixed;
     }
-    nav a i.active {
-        color: blue !important
-    }
 
-    .navigasi-header {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        margin-top: 70px;
-        background-color: #383838bd ;
-        border-radius: 10px;
-        z-index: 1;
-        justify-content: center;
-        text-align: center;
-        bottom: 50px
-    }
-
-    .navigasi-header a {
-        text-decoration: none;
-        margin: 10px 15px;
-    }
-
-    .navigasi-header i {
-        color: white
+    .hidden-nav-h {
+        bottom: 150px;
+        position: fixed;
     }
 }
 
@@ -250,7 +230,7 @@ header h3 {
         margin-top: 70px;
         background-color: #383838bd ;
         border-radius: 10px;
-        z-index: 1;
+        z-index: 100;
         justify-content: center;
         text-align: center;
         transition: bottom 1s ease;
