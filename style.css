@@ -32,7 +32,7 @@ header {
     }
 
     .hidden-nav {
-        bottom: 20px;
+        bottom: 30px;
         position: fixed;
     }
 }
@@ -227,7 +227,7 @@ header h3 {
         z-index: 1;
         justify-content: center;
         text-align: center;
-        transition: bottom 2s ease;
+        transition: bottom 1s ease;
         bottom: -100px 
     }
 
@@ -250,6 +250,17 @@ header h3 {
     .navigasi i {
         color: white
     }
+
+    main h2 {
+        margin-left: 25px;
+        margin-right: 20px;
+        font-size: 1.2rem !important;
+        font-weight: bold;
+        background-color: #383838;
+        padding: 5px 15px;
+        border-radius: 10px ;
+        color: white
+    }
 }
 
 
@@ -269,13 +280,15 @@ aside p {
 aside h2 {
     margin-left: 25px;
     margin-right: 20px;
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     font-weight: bold;
     background-color: #383838;
     padding: 5px 15px;
     border-radius: 10px ;
     color: white
 }
+
+
 
 aside h4 {
     margin-left: 35px;
