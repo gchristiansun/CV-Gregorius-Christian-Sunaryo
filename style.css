@@ -190,6 +190,14 @@ header h3 {
         padding-bottom: 20px;
     }
 
+    aside hr {
+        display: none
+    }
+
+    section h2 bi bi {
+        display: none
+    }
+
     fieldset {
         border-radius: 20px;
         padding: 10px 5px;
