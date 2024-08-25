@@ -404,6 +404,16 @@ section h4 {
     position: relative;
 }
 
+.css-box-local-button {
+    margin: 10px 25px;
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color: #383838;
+    padding: 5px
+}
+
 .css-box-local img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -425,8 +435,7 @@ section h4 {
 
 .css-box-local h4 {
     margin: 0;
-    line-height: 1.4;
-    margin: 15px 0 15px 15px;
+    margin: 15px 0 5px 15px;
     text-align: left;
 }
 
@@ -435,6 +444,16 @@ section h4 {
     top: 10px;
     background-color: #3838388a;
     padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+}
+
+.css-box-local-desc {
+    position: absolute;
+    bottom: 50px;
+    background-color: transparent;
+    padding: 0px 0px;
     border-radius: 10px;
     color: white;
     font-size: 10px;
