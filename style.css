@@ -26,6 +26,7 @@ header {
         width: 100%;
         z-index: 100;
         border-radius: 0 !important;
+        font-size: 22px !important;
     }
 
     .hidden {
@@ -172,29 +173,23 @@ header h3 {
 
     main {
         flex: 3.5;
-        max-width: 340px;
+        max-width: 360px;
         background-color: rgb(255, 255, 255);
         margin: 10px;
         margin-top: 0;
-        border-radius: 5px;
         padding: 0 0 20px 0;
     }
 
     aside {
         flex: 1.5;
-        max-width: 340px;
+        max-width: 360px;
         background-color: white;
-        margin: 0px 0px 10px 0px;
-        border-radius: 5px;
+        margin: 0px 0px 0px 0px;
         justify-content: center;
         padding-bottom: 20px;
     }
 
     aside hr {
-        display: none
-    }
-
-    section h2 bi bi {
         display: none
     }
 
@@ -273,18 +268,29 @@ header h3 {
     main h2 {
         margin-left: 25px;
         margin-right: 20px;
-        font-size: 1.2rem !important;
         font-weight: bold;
         background-color: #383838;
         padding: 5px 15px;
         border-radius: 10px ;
-        color: white
+        color: white;
+        font-size: 10px !important;
     }
 
-    body p, body li {
+    body p, body li, label, input {
         font-family: Arial, Helvetica, sans-serif !important;
         font-size: 12px;
-        
+    }
+
+    aside h2 {
+        font-size: 1000px !important;
+    }
+
+    .css-container-local h2, h4 {
+        font-size: 16px !important;
+    }
+
+    body h2 {
+        margin-bottom: 10px !important;
     }
 }
 
