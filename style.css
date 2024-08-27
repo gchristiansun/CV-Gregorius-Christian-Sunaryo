@@ -17,7 +17,7 @@ header {
         margin: 0;
         background-color: #383838;
         padding: 20px;
-        height: 99vh;
+        height: 100vh;
         transition: transform 1s ease;
         outline: 1px solid #fff;
         position: fixed;
@@ -38,7 +38,7 @@ header {
     }
 
     .hidden-nav-h {
-        bottom: 100px;
+        bottom: 70px;
         position: fixed;
         background-color: #505050
     }
