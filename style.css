@@ -173,7 +173,7 @@ header h3 {
 
     main {
         flex: 3.5;
-        max-width: 360px;
+        max-width: 340px;
         background-color: rgb(255, 255, 255);
         margin: 10px;
         margin-top: 0;
@@ -182,7 +182,7 @@ header h3 {
 
     aside {
         flex: 1.5;
-        max-width: 360px;
+        max-width: 340px;
         background-color: white;
         margin: 0px 0px 0px 0px;
         justify-content: center;
@@ -242,7 +242,9 @@ header h3 {
         justify-content: center;
         text-align: center;
         transition: bottom 1s ease;
-        bottom: -100px 
+        bottom: -100px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
     }
 
     .navigasi {
