@@ -25,6 +25,11 @@ window.addEventListener('scroll', function() {
     }
     });
 
+    window.addEventListener('click', function() {
+        var close = this.document.getElementsByClassName('close');
+        close.style.display = 'none'
+    });
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const typingElement = document.getElementById('typing');
     const constantElement = document.getElementById('constant');
